@@ -1,0 +1,25 @@
+{
+  "watch": [
+    "main.js",
+    "preload.js",
+    "renderer.js",
+    "index.html",
+    "style.css"
+  ],
+  "ignore": [
+    "node_modules/*",
+    ".git/*",
+    "*.mp4",
+    "*.mp3",
+    "*.wav",
+    "*.aac",
+    "*.ogg",
+    "*.m4a",
+    "*.flac",
+    "*.jpg",
+    "*.jpeg",
+    "*.png",
+    "*.bmp"
+  ],
+  "ext": "js,html,css,json"
+} 

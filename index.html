@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+    <title>Audio to Video Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Audio to Video Converter</h1>
+
+        <div class="form-group">
+            <label for="audioFile">Input Audio File:</label>
+            <input type="text" id="audioFilePath" readonly placeholder="No file selected">
+            <button id="browseAudio">Browse</button>
+        </div>
+
+        <div class="form-group">
+            <label>Background Type:</label>
+            <input type="radio" id="bgBlack" name="backgroundType" value="black" checked>
+            <label for="bgBlack">Black Screen</label>
+            <input type="radio" id="bgImage" name="backgroundType" value="image">
+            <label for="bgImage">Image</label>
+        </div>
+
+        <div id="imageOptions" class="form-group" style="display: none;">
+            <label for="imageFile">Image File:</label>
+            <input type="text" id="imageFilePath" readonly placeholder="No image selected">
+            <button id="browseImage">Browse Image</button>
+            <br>
+            <input type="checkbox" id="preserveAspectRatio">
+            <label for="preserveAspectRatio">Preserve Aspect Ratio (adds padding if needed)</label>
+        </div>
+
+        <div class="form-group">
+            <label for="resolution">Output Resolution:</label>
+            <select id="resolution" class="resolution-select">
+                <option value="320x240">320x240 (QVGA)</option>
+                <option value="640x480">640x480 (VGA)</option>
+                <option value="854x480">854x480 (480p)</option>
+                <option value="1280x720" selected>1280x720 (720p HD)</option>
+                <option value="1920x1080">1920x1080 (1080p Full HD)</option>
+                <option value="2560x1440">2560x1440 (1440p QHD)</option>
+                <option value="3840x2160">3840x2160 (4K UHD)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="outputName">Output File Name (e.g., my_video.mp4):</label>
+            <input type="text" id="outputName" value="output_video.mp4">
+        </div>
+
+        <div class="form-group">
+            <label for="outputDir">Output Directory:</label>
+            <input type="text" id="outputDirPath" readonly placeholder="No directory selected">
+            <button id="browseOutputDir">Browse Directory</button>
+        </div>
+
+        <button id="convertBtn">Convert</button>
+
+        <div id="statusMessage" class="status"></div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
