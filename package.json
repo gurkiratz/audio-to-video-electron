@@ -1,5 +1,5 @@
 {
-  "name": "electron-ffmpeg-app",
+  "name": "audio-to-video-electron",
   "version": "1.0.0",
   "description": "An Electron app to convert audio to video with FFmpeg.",
   "main": "main.js",
